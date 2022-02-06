@@ -13,8 +13,6 @@ client.once("ready", () => {
 client.on("messageCreate", (message) => {
   if (message.content.toLocaleLowerCase().search("sus") !== -1) {
     message.channel.send("AMOGUS");
-  } else if (message.content.toLocaleLowerCase().search("fur") !== -1) {
-    message.channel.send("Burn furries! :flame::fox::flame:");
   }
 });
 
