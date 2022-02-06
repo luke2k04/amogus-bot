@@ -1,5 +1,7 @@
 require("dotenv").config();
-const { Client, Intents } = require("discord.js");
+const { Client, Intents, MessageAttachment, Message } = require("discord.js");
+const fs = require("fs");
+const path = require("path");
 
 const client = new Client({
   intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
@@ -15,11 +17,8 @@ client.on("messageCreate", (message) => {
   if (message.content.toLocaleLowerCase().search("sus") !== -1) {
     message.channel.send("AMOGUS");
   } else if (message.content.toLocaleLowerCase().search("czarnek") !== -1) {
-    message.channel.send("", {
-      files: [
-        "https://cdn.discordapp.com/attachments/939843875776905236/939936244182437898/czarnek_ty_chuju.png",
-      ],
-    });
+    const image = fs.readFileSync(path.join(__dirname, "garnek.png"));
+    message.channel.send({ files: [image] });
   }
 });
 
