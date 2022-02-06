@@ -12,7 +12,7 @@ client.once("ready", () => {
 
 client.on("messageCreate", (message) => {
   if (message.content.toLocaleLowerCase().search("sus") !== -1) {
-    message.channel.send("AMOGUS");
+    message.channel.send("AMOGUSs");
   }
 });
 
