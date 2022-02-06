@@ -27,7 +27,9 @@ client.on("messageCreate", (message) => {
     message.channel.send({ files: [image] });
   } else if (message.content.toLocaleLowerCase().search("ała") !== -1) {
     message.channel.send("cała? ta pojebana kurwa?");
-  } else if (message.content.toLocaleLowerCase().search("ała") !== -1) {
+  } else if (message.content.toLocaleLowerCase().search("całoś") !== -1) {
+    message.channel.send("cała? ta pojebana kurwa?");
+  } else if (message.content.toLocaleLowerCase().search("całk") !== -1) {
     message.channel.send("cała? ta pojebana kurwa?");
   }
 });
