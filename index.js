@@ -22,9 +22,12 @@ client.on("messageCreate", (message) => {
   } else if (message.content.toLocaleLowerCase().search("czarnk") !== -1) {
     const image = fs.readFileSync(path.join(__dirname, "garnek.png"));
     message.channel.send({ files: [image] });
-  } else if (message.content.toLocaleLowerCase().search("cała") !== -1) {
+  } else if (message.content.toLocaleLowerCase().search("garnek") !== -1) {
+    const image = fs.readFileSync(path.join(__dirname, "garnek.png"));
+    message.channel.send({ files: [image] });
+  } else if (message.content.toLocaleLowerCase().search("ała") !== -1) {
     message.channel.send("cała? ta pojebana kurwa?");
-  } else if (message.content.toLocaleLowerCase().search("wstała") !== -1) {
+  } else if (message.content.toLocaleLowerCase().search("ała") !== -1) {
     message.channel.send("cała? ta pojebana kurwa?");
   }
 });
