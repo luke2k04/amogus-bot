@@ -31,7 +31,13 @@ client.on("messageCreate", (message) => {
     message.channel.send("cała? ta pojebana kurwa?");
   } else if (message.content.toLocaleLowerCase().search("całk") !== -1) {
     message.channel.send("cała? ta pojebana kurwa?");
+  } else if (message.content.toLocaleLowerCase().search("owo") !== -1) {
+    message.channel.send("uwu");
+  } else if (message.content.toLocaleLowerCase().search("uwu") !== -1) {
+    message.channel.send("owo");
   }
+
+  // can someone rewrite to switch
 });
 
 client.login(process.env.DISCORD_TOKEN);
