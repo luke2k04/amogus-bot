@@ -1,0 +1,3 @@
+# amogus-bot
+
+shitposting bot
