@@ -14,31 +14,31 @@ client.once("ready", () => {
 
 client.on("messageCreate", (message) => {
   if (message.author.bot) return;
-  if (message.content.toLocaleLowerCase().search("sus") !== -1) {
-    message.channel.send("AMOGUS");
-  } else if (message.content.toLocaleLowerCase().search("czarnek") !== -1) {
-    const image = fs.readFileSync(path.join(__dirname, "garnek.png"));
-    message.channel.send({ files: [image] });
-  } else if (message.content.toLocaleLowerCase().search("czarnk") !== -1) {
-    const image = fs.readFileSync(path.join(__dirname, "garnek.png"));
-    message.channel.send({ files: [image] });
-  } else if (message.content.toLocaleLowerCase().search("garnek") !== -1) {
-    const image = fs.readFileSync(path.join(__dirname, "garnek.png"));
-    message.channel.send({ files: [image] });
-  } else if (message.content.toLocaleLowerCase().search("ała") !== -1) {
-    message.channel.send("uSuŃcIe mOjE TwArZe!!");
-  } else if (message.content.toLocaleLowerCase().search("całoś") !== -1) {
-    message.channel.send("uSuŃcIe mOjE TwArZe!!");
-  } else if (message.content.toLocaleLowerCase().search("całk") !== -1) {
-    message.channel.send("uSuŃcIe mOjE TwArZe!!");
-  } else if (message.content.toLocaleLowerCase().search("owo") !== -1) {
-    message.channel.send("uwu");
-  } else if (message.content.toLocaleLowerCase().search("uwu") !== -1) {
-    message.channel.send("owo");
-  }
 
-  // can someone rewrite to switch?
-  // or should it be me?
+  const s = (query) => message.content.toLocaleLowerCase().search(query) !== -1;
+
+  switch (true) {
+    case s("sus"):
+      message.channel.send("AMOGUS");
+      break;
+    case s("czarnek"):
+    case s("czarnk"):
+    case s("garnek"):
+      const image = fs.readFileSync(path.join(__dirname, "garnek.png"));
+      message.channel.send({ files: [image] });
+      break;
+    case s("ała"):
+    case s("całoś"):
+    case s("całk"):
+      message.channel.send("uSuŃcIe mOjE TwArZe!!");
+      break;
+    case s("owo"):
+      message.channel.send("uwu");
+      break;
+    case s("uwu"):
+      message.channel.send("owo");
+      break;
+  }
 });
 
 client.login(process.env.DISCORD_TOKEN);
