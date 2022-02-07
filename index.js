@@ -26,11 +26,11 @@ client.on("messageCreate", (message) => {
     const image = fs.readFileSync(path.join(__dirname, "garnek.png"));
     message.channel.send({ files: [image] });
   } else if (message.content.toLocaleLowerCase().search("ała") !== -1) {
-    message.channel.send("cała? ta pojebana kurwa?");
+    message.channel.send("uSuŃcIe mOjE TwArZe!!");
   } else if (message.content.toLocaleLowerCase().search("całoś") !== -1) {
-    message.channel.send("cała? ta pojebana kurwa?");
+    message.channel.send("uSuŃcIe mOjE TwArZe!!");
   } else if (message.content.toLocaleLowerCase().search("całk") !== -1) {
-    message.channel.send("cała? ta pojebana kurwa?");
+    message.channel.send("uSuŃcIe mOjE TwArZe!!");
   } else if (message.content.toLocaleLowerCase().search("owo") !== -1) {
     message.channel.send("uwu");
   } else if (message.content.toLocaleLowerCase().search("uwu") !== -1) {
