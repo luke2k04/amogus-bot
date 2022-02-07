@@ -37,7 +37,8 @@ client.on("messageCreate", (message) => {
     message.channel.send("owo");
   }
 
-  // can someone rewrite to switch
+  // can someone rewrite to switch?
+  // or should it be me?
 });
 
 client.login(process.env.DISCORD_TOKEN);
